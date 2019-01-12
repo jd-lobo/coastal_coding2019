@@ -7,6 +7,10 @@
     {
       "from": "5a47080",
       "to": "759f7e8"
+    },
+    {
+      "from": "5a47080",
+      "to": "229dd967-6434-467d-8ea0-fbfb6454f304"
     }
   ],
   "nodes": [
@@ -902,8 +906,8 @@
         }
       ],
       "position": [
-        -440.0595703125,
-        -208.2460174560547
+        -414.33172607421875,
+        16.872650146484375
       ],
       "title": {
         "code": [
@@ -924,6 +928,117 @@
         ],
         "name": "io.DataSink",
         "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/nipype.interfaces.io.html#datasink"
+      }
+    },
+    {
+      "category": [
+        "Nipype",
+        "utility",
+        "base"
+      ],
+      "ports": [
+        {
+          "base": "in_file",
+          "editable": true,
+          "id": "c26e6e3a-72ef-48fd-b12a-89253f66096e",
+          "input": true,
+          "inputPort": "229dd967-6434-467d-8ea0-fbfb6454f304",
+          "name": "in_file",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "format_string",
+          "editable": true,
+          "id": "ac6d52ba-2c46-487b-988f-c2f74755fd4c",
+          "input": true,
+          "inputPort": "18748326-ad6d-4242-b579-10050d76b715",
+          "name": "format_string",
+          "output": false,
+          "outputPort": false,
+          "value": "\"/output/skullstrip.nii.gz\"",
+          "visible": true,
+          "iterator": false
+        },
+        {
+          "base": "keep_ext",
+          "editable": true,
+          "id": "8dce5b12-f02c-4252-bf1e-b7bf29651b98",
+          "input": true,
+          "inputPort": "3e9b4e8e-6af2-4ae6-9a2d-0d0592bd65e4",
+          "name": "keep_ext",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "parse_string",
+          "editable": true,
+          "id": "8dd552e5-e163-4547-97ef-4d2ffd075ae7",
+          "input": true,
+          "inputPort": "e0bbd1af-b640-4098-b23a-d83b3ee46a69",
+          "name": "parse_string",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "use_fullpath",
+          "editable": true,
+          "id": "449db9c4-dc54-4032-8582-006c71cd1b55",
+          "input": true,
+          "inputPort": "cca77dc8-d089-4d05-9641-ffa53d2d15f6",
+          "name": "use_fullpath",
+          "output": false,
+          "outputPort": false,
+          "value": "",
+          "visible": false,
+          "iterator": false
+        },
+        {
+          "base": "out_file",
+          "editable": false,
+          "id": "5c9f71df-9c96-4f67-98dc-287e0f647b60",
+          "input": false,
+          "inputPort": false,
+          "name": "out_file",
+          "output": true,
+          "outputPort": "819373a7-16d0-481c-99cd-1b635d68d9d1",
+          "value": "",
+          "visible": true,
+          "iterator": false
+        }
+      ],
+      "position": [
+        -408.6058583021851,
+        -163.2293769233857
+      ],
+      "title": {
+        "code": [
+          {
+            "language": "Nipype",
+            "comment": "Change the name of a file based on a mapped format string.",
+            "argument": {
+              "name": "utility.Rename()",
+              "import": "import nipype.interfaces.utility as utility"
+            }
+          },
+          {
+            "language": "Docker",
+            "argument": {
+              "name": "Nipype, utility"
+            }
+          }
+        ],
+        "name": "utility.Rename",
+        "web_url": "https://nipype.readthedocs.io/en/latest/interfaces/generated/interfaces.utility/base.html#rename"
       }
     }
   ],
